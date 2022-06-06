@@ -1,0 +1,97 @@
+/* ========Page======== */
+
+* {
+	box-sizing: border-box;
+
+}
+
+body {
+	position: relative;
+}
+.container {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 50em;
+}
+
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+p,
+h2,h1 {
+	font-family: 'Cormorant Garamond', serif;
+}
+p {
+	font-size: 1.2em;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+	color: #0babab;
+}
+
+li {
+	margin-bottom: .7em;
+}
+
+/* ========Navigation======== */
+
+nav {
+	text-align: center;
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #bababa;
+	padding-top: 1rem;
+	padding-bottom: .5rem;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+  left: 0px;
+	z-index: 10;
+}
+#nav-list {
+	display: flex;
+	justify-content: center;
+  list-style: none;
+  padding: 0;
+	margin: 0;
+}
+#nav-list a {
+	margin: 0 .5rem;
+	padding: 1rem;
+	color: #6b6b6b;
+	font-family: 'Josefin Sans',sans-serif;
+	font-size: 1.3em;
+	font-weight: regular;
+}
+
+#nav-list a:hover {
+	color: #0babab;
+}
+#brand a {
+	color: #000;
+	font-family: 'Josefin Sans',sans-serif;
+	font-size: 1.2em;
+	font-weight: 100;
+}
+#brand {
+	padding: 0;
+	margin: 0 0 1rem;
+}
+
+/*ORDER8*/
+section#content {
+	margin-top: 150px;
+}
+
+#main{
+	flex: 3;
+	font-size: 1em;
+	font-family: 'Josefin Sans',sans-serif;
+	line-height: 10px;
+	color: #0a0a0a;
+}
