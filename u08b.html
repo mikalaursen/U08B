@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="u08b.css">
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Josefin+Sans:100,300,400" rel="stylesheet">
+		<title>U08B Pizza Interactive order form</title>
+		
+		<!--
+		
+		Mika Laursen- U08B
+		
+		What objectives are you demonstrating?
+		Building of interactive form.
+		Use of <pre> to line up size and topping figures
+		
+		
+		-->
+	</head>
+
+	<body>
+
+        <body>
+	
+            <nav>
+                <div class="navbar clearfix">
+                        <div class="container">
+                            <h1 id="brand"><a href="u08b.html">MIKA'S PIZZERIA</a></h1>
+                            <ul id="nav-list">
+                                <li><a href="u08b.html">HOME</a></li>
+                                <li><a href="menu.html">MENU</a></li>
+                                <li><a href="order.html">ORDER</a></li>
+                                <li><a href="contact.html">CONTACT</a></li>
+                            </ul>
+                        </div>
+                </div>
+            </nav>
+            <section id="content"> <!-- CONTENT OF PAGE -->
+    <div class="container">
+                        
+     <body>
+      <form method="post" action="u08b.php">
+      <!-- TEXT FIELD -->
+      <h2>ORDER HERE</h2>
+
+      <p><b>CUSTOMER NAME</b></p>
+
+      <input type="text" name="name" size="10" placeholder="Name Here"> 
+
+      <!-- RADIO BUTTONS-->
+      <p><b>PIZZA SIZE </b>(SELECT ONE)</p>
+
+      <input type="radio" name="size" value="Small"> Small ($5.00) <br/>
+       <input type="radio" name="size" value="Medium"> Medium ($6.00) <br/>
+      <input type="radio" name="size" value="Large"> Large ($7.00)<br/>
+      <br/>
+
+      <!-- CHECKBOXES-->
+      <p><b>TOPPINGS</b></p>
+
+      <input class="topping-1" type="checkbox" name= "ex"/>  Extra Cheese ($1.00)<br/>
+     <input class="topping-2" type="checkbox" name="pepp"/> Pepperoni ($1.00)<br/>
+       <input class="topping-3" type="checkbox" name="olives"/>  Olives ($1.00)<br/>
+      <input class="topping-4" type="checkbox" name= "pine"/>  Pineapple ($1.00)<br/>
+      <input class="topping-5" type="checkbox" name="mush"/>  Mushrooms ($1.00)<br/>
+      <input class="topping-6" type="checkbox" name="saus"/>  Sausage ($1.00)<br/><br/>
+     
+      
+      <!-- THE BUTTONS TO RESET THE ORDER OR TO SUBMIT THE ORDER-->
+      <input type="reset" name="reset" value="Reset"/>
+      <!--Pizza order selector passing data to PHP page-->
+      <input type="submit" value="Order Your Pizza!" />
+      </form>
+    </div>
+    </section>
+    </body>
+</html>
+    
