@@ -1,4 +1,4 @@
- <?php
+<?php
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
@@ -9,15 +9,17 @@
     if(isset($_POST["name"])) { $name = $_POST["name"]; } else { $name = ""; }
     if(isset($_POST["size"])) { $size = $_POST["size"]; } else { $size = ""; }
     if(isset($_POST["pepp"])) { $pepp = $_POST["pepp"]; } else { $pepp = ""; }
-    if(isset($_POST["isau"])) { $isau = $_POST["isau"]; } else { $isau = ""; }
+    if(isset($_POST["ex"])) { $ex = $_POST["ex"]; } else { $ex = ""; }
     if(isset($_POST["mush"])) { $mush = $_POST["mush"]; } else { $mush = ""; }
-    if(isset($_POST["gppr"])) { $gppr = $_POST["gppr"]; } else { $gppr = ""; }
+    if(isset($_POST["olives"])) { $olives = $_POST["olives"]; } else { $olives = ""; }
+    if(isset($_POST["pine"])) { $pine = $_POST["pine"]; } else { $pine = ""; }
+    if(isset($_POST["saus"])) { $saus = $_POST["saus"]; } else { $saus = ""; }
 
     $tot = 0; //sets variable price to 0
 
     print "
     <div id='receipt'>
-        <h1>Chad's Pizzaria</h1>
+        <h1>Mika's's Pizzaria</h1>
         <h2>Receipt</h2>
         <h3>Pizza Order for: $name </h3> 
         
@@ -26,38 +28,46 @@
         
         // Print size and price if checked
         if($size == "Small") {
-            print "<pre>Size: Small          $8.50</pre>";
-            $tot = $tot + 8.50;
+            print "<pre>Size: Small          $5.00</pre>";
+            $tot = $tot + 5.00;
         }
 
         if($size == "Medium") {
-            print "<pre>Size: Medium        $10.50</pre>";
-            $tot = $tot + 10.50;
+            print "<pre>Size: Medium        $6.00</pre>";
+            $tot = $tot + 6.00;
         } 
 
         if($size == "Large") {
-            print "<pre>Size: Large         $12.50</pre>";
-            $tot = $tot + 12.50;
+            print "<pre>Size: Large         $7.00</pre>";
+            $tot = $tot + 7.00;
         }
         // Print toppings and price if checked and totals price
         if($pepp) {
-            print "<pre>Pepperoni            $2.00</pre>";
+            print "<pre>Pepperoni            $1.00</pre>";
             $tot + 2.00;
         }
 
-        if($isau) {
-            print "<pre>Italian Sausage      $2.50</pre>";
-            $tot = $tot + 2.50;
+        if($ex) {
+            print "<pre>Extra Cheese      $1.00</pre>";
+            $tot = $tot + 1.00;
         }
 
         if($mush) {
-            print "<pre>Mushrooms            $2.00</pre>";
-            $tot = $tot + 2.00;
+            print "<pre>Mushrooms            $1.00</pre>";
+            $tot = $tot + 1.00;
         }
 
-        if($gppr) {
-            print "<pre>Green Peppers        $0.75</pre>";
-            $tot = $tot + 0.75;
+        if($olives) {
+            print "<pre>Olives        $1.00</pre>";
+            $tot = $tot + 1.00;
+        }
+        if($pine) {
+            print "<pre>Pineapple        $1.00</pre>";
+            $tot = $tot + 1.00;
+        }
+        if($saus) {
+            print "<pre>Sausage        $1.00</pre>";
+            $tot = $tot + 1.00;
         }
 
         $ftot = number_format($tot, 2);//variable for total price formatted 2 decimal places
